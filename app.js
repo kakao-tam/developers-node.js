@@ -19,7 +19,7 @@ app.use(
   })
 );
 
-const client_id = "4408b5bb51bdf4c89879e933556a21e8";
+const client_id = " this is rest api key ";
 const client_secret = " this is client secret key ";
 const domain = "http://localhost:4000";
 const redirect_uri = `${domain}/redirect`;
