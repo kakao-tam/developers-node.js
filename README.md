@@ -50,4 +50,7 @@ npm start
 - express-session: ^1.17.3
 - cors: ^2.8.5
 - qs: ^6.11.2
-- axios: ^1.6.7 
+- axios: ^1.6.7
+
+## 스크린샷
+<img width="837" alt="image" src="https://github.com/user-attachments/assets/0f45dea1-042a-418a-9c5d-0275b7301baf" />
