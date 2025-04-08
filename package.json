@@ -1,7 +1,7 @@
 {
-  "name": "kakao-nodejs-example",
+  "name": "kakao-login-node",
   "version": "1.0.0",
-  "description": "Kakao REST API Node.js Example",
+  "description": "",
   "main": "app.js",
   "scripts": {
     "start": "node app.js"
@@ -9,7 +9,6 @@
   "dependencies": {
     "express": "^4.18.2",
     "express-session": "^1.17.3",
-    "cors": "^2.8.5",
     "qs": "^6.11.2",
     "axios": "^1.6.7"
   }

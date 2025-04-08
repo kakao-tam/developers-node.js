@@ -48,7 +48,6 @@ npm start
 
 - express: ^4.18.2
 - express-session: ^1.17.3
-- cors: ^2.8.5
 - qs: ^6.11.2
 - axios: ^1.6.7
 
