@@ -67,4 +67,5 @@ npm start
 - axios: ^1.6.7
 
 ## 스크린샷
-<img width="837" alt="image" src="https://github.com/user-attachments/assets/0f45dea1-042a-418a-9c5d-0275b7301baf" />
+![image](https://github.com/user-attachments/assets/a64d2a83-c036-4cb2-88e5-07bba3890ec3)
+
