@@ -18,7 +18,7 @@ app.use(
   })
 );
 
-const client_id = " this is rest api key ";
+const client_id = "4408b5bb51bdf4c89879e933556a21e8";
 const client_secret = " this is client secret key ";
 const domain = "http://localhost:4000";
 const redirect_uri = `${domain}/redirect`;
@@ -32,19 +32,6 @@ const message_template = {
     mobile_web_url: "https://developers.kakao.com",
   },
 };
-
-app.get("/authorize", function (req, res) {
-  let { scope } = req.query;
-  var scopeParam = "";
-  if (scope) {
-    scopeParam = "&scope=" + scope;
-  }
-  res
-    .status(302)
-    .redirect(
-      `${kauth_host}/oauth/authorize?client_id=${client_id}&redirect_uri=${redirect_uri}&response_type=code${scopeParam}`
-    );
-});
 
 async function call(method, uri, param, header) {
   try {
@@ -60,6 +47,19 @@ async function call(method, uri, param, header) {
   return rtn.data;
 }
 
+app.get("/authorize", function (req, res) {
+  let { scope } = req.query;
+  var scopeParam = "";
+  if (scope) {
+    scopeParam = "&scope=" + scope;
+  }
+  res
+    .status(302)
+    .redirect(
+      `${kauth_host}/oauth/authorize?client_id=${client_id}&redirect_uri=${redirect_uri}&response_type=code${scopeParam}`
+    );
+});
+
 app.get("/redirect", async function (req, res) {
   const param = qs.stringify({
     grant_type: "authorization_code",
@@ -70,8 +70,11 @@ app.get("/redirect", async function (req, res) {
   });
   const header = { "content-type": "application/x-www-form-urlencoded" };
   var rtn = await call("POST", kauth_host + "/oauth/token", param, header);
-  req.session.key = rtn.access_token;
-  res.status(302).redirect(`${domain}/index.html?login=success`);
+
+  if (rtn.access_token) {
+    req.session.key = rtn.access_token;
+    res.status(302).redirect(`${domain}/index.html?login=success`);
+  }
 });
 
 app.get("/profile", async function (req, res) {
