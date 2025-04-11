@@ -50,7 +50,7 @@ npm start
 
 ## 사용 방법
 
-1. 브라우저에서 `http://localhost` 접속
+1. 브라우저에서 `http://localhost:4000` 접속
 2. 카카오 로그인 버튼 클릭
 3. 각 기능 버튼을 통해 API 테스트
 
