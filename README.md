@@ -17,7 +17,6 @@
 .
 │
 ├── index.html # 메인 HTML 파일
-└── style.css # 스타일시트
 ├── app.js # 메인 애플리케이션 파일
 ├── package.json # 프로젝트 메타데이터 및 의존성
 └── README.md # 프로젝트 설명 파일
