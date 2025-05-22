@@ -49,6 +49,18 @@
           function setContents(data) {
             document.getElementById("contents").value = data;
           }
+
+          // Check for login success parameter
+          window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('login') === 'success') {
+              const successLabel = document.createElement('span');
+              successLabel.textContent = '로그인 성공';
+              successLabel.style.color = 'green';
+              successLabel.style.marginLeft = '10px';
+              document.querySelector('.login-buttons').appendChild(successLabel);
+            }
+          }
         </script>
 
         <div class="login-container">
@@ -62,6 +74,7 @@
                 ">
               JavaScript SDK로 로그인
             </button>
+            
           </div>
         </div>
 
